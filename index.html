@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imperivm Eventos — Salones de Lujo en Ciudad del Este, Paraguay</title>
+    <meta name="description"
+        content="Imperivm Eventos: el salón de eventos más exclusivo de Ciudad del Este, Paraguay. Bodas, graduaciones, quinceañeras y eventos corporativos de lujo. Reservá tu fecha." />
+    <meta name="keywords"
+        content="salones de eventos Ciudad del Este, salones de lujo Paraguay, bodas Paraguay, eventos corporativos Paraguay, quinceañeras Ciudad del Este, Imperivm Eventos" />
+    <meta property="og:title" content="Imperivm Eventos — Lujo & Elegancia en Ciudad del Este" />
+    <meta property="og:description"
+        content="Celebrá los momentos más importantes de tu vida en los salones de eventos más exclusivos de Paraguay." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://imperiumeventos.com.py/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/jpeg" href="logo.jpg" /><text y='.9em' font-size='90'>👑</text></svg>" />
+</head>
+
+<body>
+
+    <!-- ═══ SPLASH SCREEN ═════════════════════════════════════════════════════ -->
+    <div id="splash-screen" style="position:fixed; inset:0; z-index:99999; background-color:#ffffff; display:flex; align-items:center; justify-content:center; transition:opacity 0.6s ease; opacity:1;">
+        <img src="logo.jpg" alt="Imperivm Eventos Logo" style="width:150px; height:auto; animation:pulse-splash 1.5s infinite alternate;">
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+                const splash = document.getElementById('splash-screen');
+                if (splash) {
+                    splash.style.opacity = '0';
+                    setTimeout(() => splash.remove(), 600);
+                }
+            }, 1000);
+        });
+    </script>
+
+
+    <!-- ═══ NAVBAR ════════════════════════════════════════════════════════════ -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                IMPERIVM
+                <span>Eventos · Ciudad del Este</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="venues.html">Salón</a>
+                <a href="gallery.html">Galería</a>
+                <a href="services.html">Servicios</a>
+                <a href="reservations.html">Reservas</a>
+                <a href="contact.html">Contacto</a>
+                <a href="reservations.html" class="btn btn-solid nav-cta"><span>Reservar</span></a>
+            </div>
+            <button class="nav-hamburger" id="hamburger" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="nav-mobile" id="mobileMenu">
+        <a href="index.html" onclick="closeMobile()">Inicio</a>
+        <a href="venues.html" onclick="closeMobile()">Salón</a>
+        <a href="gallery.html" onclick="closeMobile()">Galería</a>
+        <a href="services.html" onclick="closeMobile()">Servicios</a>
+        <a href="reservations.html" onclick="closeMobile()">Reservas</a>
+        <a href="contact.html" onclick="closeMobile()">Contacto</a>
+    </div>
+
+    <!-- ═══ HERO ══════════════════════════════════════════════════════════════ -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="catalogo/Screenshot 2026-03-07 183213.png"
+                alt="Salón Imperial Imperivm Eventos - bodas de lujo Ciudad del Este" fetchpriority="high" />
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">Ciudad del Este · Paraguay</p>
+            <h1 class="hero-title">
+                Donde los Sueños<br>
+                <em>Se Vuelven Realidad</em>
+            </h1>
+            <p class="hero-tagline">Salones de eventos exclusivos · Bodas · Graduaciones · Quinceañeras · Empresariales
+            </p>
+            <div class="hero-actions">
+                <a href="reservations.html" class="btn btn-solid"><span>✦ Reservar mi Evento</span></a>
+                <a href="venues.html" class="btn"><span>Ver el Salón</span></a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Descubrir</span>
+            <div class="hero-scroll-line"></div>
+        </div>
+    </section>
+
+
+    <!-- ═══ INTRO SECTION ═════════════════════════════════════════════════════ -->
+    <section class="section">
+        <div class="container">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center;">
+                <div class="reveal">
+                    <span class="section-label">Nuestra Esencia</span>
+                    <h2 class="section-title">La <em>Excelencia</em><br>Define Cada Detalle</h2>
+                    <p class="section-subtitle">En Imperivm Eventos, elevamos cada celebración a una experiencia
+                        extraordinaria. Con más de una década en Ciudad del Este, somos la elección preferida de quienes
+                        buscan lo mejor.</p>
+                    <br><br>
+                    <p style="font-size:0.85rem; color:var(--gray-light); line-height:1.9;">Nuestro salón combina
+                        arquitectura majestuosa, tecnología audiovisual de última generación y un servicio impecable que
+                        convierte cada evento en un momento irrepetible. Cada rincón fue diseñado pensando en la
+                        grandiosidad de tu celebración.</p>
+                    <br>
+                    <a href="venues.html" class="btn" style="margin-top:1rem;"><span>Conocer nuestro salón →</span></a>
+                </div>
+                <div class="reveal reveal-delay-1" style="position:relative;">
+                    <img src="catalogo/Screenshot 2026-03-07 183059.png" alt="Decoración de boda Imperivm Eventos"
+                        style="width:100%; aspect-ratio:4/5; object-fit:cover; object-position:center top;" />
+                    <div
+                        style="position:absolute; bottom:-2rem; left:-2rem; width:180px; padding:1.5rem; background:var(--gold); text-align:center;">
+                        <div style="font-family:var(--serif); font-size:2.5rem; font-weight:300; color:var(--black);">12
+                        </div>
+                        <div
+                            style="font-size:0.55rem; letter-spacing:0.35em; text-transform:uppercase; color:var(--black); opacity:0.8;">
+                            Años de Lujo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ SERVICES PREVIEW ══════════════════════════════════════════════════ -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-center reveal" style="margin-bottom:4rem;">
+                <span class="section-label">Lo que ofrecemos</span>
+                <h2 class="section-title">Servicios de <em>Alto Nivel</em></h2>
+                <p class="section-subtitle">Un equipo especializado para que solo tengas que disfrutar.</p>
+            </div>
+            <div class="grid-3">
+                <div class="service-card reveal">
+                    <div class="service-name">Planificación Integral</div>
+                    <p class="service-desc">Coordinamos cada detalle de tu evento, desde la conceptualización hasta la
+                        ejecución perfecta.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-name">Decoración de Lujo</div>
+                    <p class="service-desc">Arreglos florales, ambientación temática y diseño de espacios que superarán
+                        tus expectativas.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-name">Catering Premium</div>
+                    <p class="service-desc">Gastronomía de autor con menús personalizados. Servicio de mozos, barra
+                        libre y cocina en vivo.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-name">Iluminación Escénica</div>
+                    <p class="service-desc">Diseño lumínico profesional con tecnología LED y sistemas de efecto para
+                        ambientes mágicos.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-name">Audio Profesional</div>
+                    <p class="service-desc">Equipos de sonido de alta fidelidad, DJ booth, micrófonos y soporte técnico
+                        durante todo el evento.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-3">
+                    <div class="service-name">Fotografía & Video</div>
+                    <p class="service-desc">Staff de fotógrafos y videógrafos profesionales para inmortalizar cada
+                        instante especial.</p>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:3rem;">
+                <a href="services.html" class="btn reveal"><span>Ver todos los servicios →</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ VENUE PREVIEW ═════════════════════════════════════════════════════ -->
+    <section class="section">
+        <div class="container">
+            <div class="section-center reveal" style="margin-bottom:4rem;">
+                <span class="section-label">Nuestro Espacio</span>
+                <h2 class="section-title">El Salón que<br><em>Inspira Grandeza</em></h2>
+            </div>
+
+            <!-- Single venue: Salón Imperial -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-bottom:2rem;">
+                <div class="reveal" style="overflow:hidden; aspect-ratio:4/3;">
+                    <img src="catalogo/Screenshot 2026-03-07 183333.png" alt="Salón Imperial - vista general"
+                        style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
+                </div>
+                <div class="reveal reveal-delay-1" style="overflow:hidden; aspect-ratio:4/3;">
+                    <img src="catalogo/Screenshot 2026-03-07 183241.png" alt="Salón Imperial - iluminación"
+                        style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
+                </div>
+            </div>
+            <div class="card reveal" style="display:grid; grid-template-columns:1fr 1fr; gap:0; overflow:hidden;">
+                <div class="card-img" style="aspect-ratio:4/3;">
+                    <img src="catalogo/Screenshot 2026-03-07 183105.png" alt="Salón Imperial interior" loading="lazy" />
+                </div>
+                <div class="card-body" style="display:flex; flex-direction:column; justify-content:center;">
+                    <div class="card-tag">Salón Insignia</div>
+                    <div class="card-title">Salón Imperial</div>
+                    <p class="card-desc">El más suntuoso de nuestros espacios. Coronado por lámparas de cristal y
+                        decoración de lujo, el Imperial es el escenario perfecto para celebraciones de gran escala en
+                        Ciudad del Este.</p>
+                    <div class="card-meta">
+                        <div><span>Capacidad</span><strong>Hasta 800 personas</strong></div>
+                        <div><span>Ambiente</span><strong>Clásico & Majestuoso</strong></div>
+                    </div>
+                    <a href="venues.html" class="btn" style="margin-top:1.5rem; width:fit-content;"><span>Conocer más
+                            →</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ EVENT TYPES ════════════════════════════════════════════════════════ -->
+    <section class="section section-mid">
+        <div class="container">
+            <div class="section-center reveal" style="margin-bottom:4rem;">
+                <span class="section-label">Celebraciones</span>
+                <h2 class="section-title">Para Cada <em>Momento Especial</em></h2>
+            </div>
+            <div class="grid-4">
+                <div class="card reveal" style="text-align:center; padding:0;">
+                    <div class="card-img" style="aspect-ratio:1/1;">
+                        <img src="catalogo/Screenshot 2026-03-07 183325.png" alt="Bodas de lujo Paraguay"
+                            loading="lazy" />
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tag">Nupcias</div>
+                        <div class="card-title" style="font-size:1.2rem;">Bodas</div>
+                    </div>
+                </div>
+                <div class="card reveal reveal-delay-1" style="text-align:center;">
+                    <div class="card-img" style="aspect-ratio:1/1;">
+                        <img src="catalogo/Screenshot 2026-03-07 183048.png" alt="Graduaciones y galas Paraguay"
+                            loading="lazy" />
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tag">Logros</div>
+                        <div class="card-title" style="font-size:1.2rem;">Graduaciones</div>
+                    </div>
+                </div>
+                <div class="card reveal reveal-delay-2" style="text-align:center;">
+                    <div class="card-img" style="aspect-ratio:1/1;">
+                        <img src="catalogo/Screenshot 2026-03-07 183241.png" alt="Eventos corporativos Paraguay"
+                            loading="lazy" />
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tag">Empresarial</div>
+                        <div class="card-title" style="font-size:1.2rem;">Corporativos</div>
+                    </div>
+                </div>
+                <div class="card reveal reveal-delay-3" style="text-align:center;">
+                    <div class="card-img" style="aspect-ratio:1/1;">
+                        <img src="catalogo/Screenshot 2026-03-07 183219.png" alt="Quinceañeras Ciudad del Este"
+                            loading="lazy" />
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tag">XV Años</div>
+                        <div class="card-title" style="font-size:1.2rem;">Quinceañeras</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ GALLERY PREVIEW ════════════════════════════════════════════════════ -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-center reveal" style="margin-bottom:4rem;">
+                <span class="section-label">Galería</span>
+                <h2 class="section-title">Momentos que <em>Perduran</em></h2>
+            </div>
+        </div>
+        <div class="gallery-masonry reveal">
+            <div class="gallery-item tall">
+                <img src="catalogo/Screenshot 2026-03-07 183213.png" alt="Salón Imperial boda floral" loading="lazy" />
+                <div class="gallery-item-overlay"><span class="gallery-label">Bodas Soñadas</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="catalogo/Screenshot 2026-03-07 183048.png" alt="Evento de gala" loading="lazy" />
+                <div class="gallery-item-overlay"><span class="gallery-label">Galas Exclusivas</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="catalogo/Screenshot 2026-03-07 183059.png" alt="Decoración de boda" loading="lazy" />
+                <div class="gallery-item-overlay"><span class="gallery-label">Decoración Floral</span></div>
+            </div>
+            <div class="gallery-item wide">
+                <img src="catalogo/Screenshot 2026-03-07 183333.png" alt="Salón Imperial completo" loading="lazy" />
+                <div class="gallery-item-overlay"><span class="gallery-label">Salón Imperial Completo</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="catalogo/Screenshot 2026-03-07 183325.png" alt="Decoración boda floral" loading="lazy" />
+                <div class="gallery-item-overlay"><span class="gallery-label">Escenografía Nupcial</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="catalogo/Screenshot 2026-03-07 183219.png" alt="Quinceañera decoración" loading="lazy" />
+                <div class="gallery-item-overlay"><span class="gallery-label">XV Años Mágicos</span></div>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:3rem;">
+            <a href="gallery.html" class="btn reveal"><span>Ver galería completa →</span></a>
+        </div>
+    </section>
+
+    <!-- ═══ TESTIMONIALS ══════════════════════════════════════════════════════ -->
+    <section class="section">
+        <div class="container">
+            <div class="section-center reveal" style="margin-bottom:4rem;">
+                <span class="section-label">Testimoniales</span>
+                <h2 class="section-title">Lo que Dicen<br><em>Nuestros Clientes</em></h2>
+            </div>
+            <div class="grid-3">
+                <div class="testimonial-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Nuestra boda fue absolutamente perfecta. El Salón Imperial superó todas
+                        nuestras expectativas. Cada detalle fue cuidado con una atención que no encontrarás en ningún
+                        otro lugar."</p>
+                    <div class="testimonial-author">— María & Rodrigo · Boda 2024</div>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-1">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"El evento corporativo anual de nuestra empresa fue un éxito rotundo
+                        gracias a Imperivm. El equipo es increíblemente profesional y el espacio impresionante."</p>
+                    <div class="testimonial-author">— Carlos Espínola · CEO, Grupo Estrella</div>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-2">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Mi quinceañera fue un sueño hecho realidad. La decoración era mágica,
+                        la comida deliciosa y el servicio impecable. ¡No podría haber pedido nada mejor!"</p>
+                    <div class="testimonial-author">— Valentina R. · XV Años 2024</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CTA BANNER ════════════════════════════════════════════════════════ -->
+    <section style="position:relative; padding:8rem 0; overflow:hidden;">
+        <div style="position:absolute; inset:0;">
+            <img src="catalogo/Screenshot 2026-03-07 183232.png" alt="Imperivm Eventos fachada"
+                style="width:100%; height:100%; object-fit:cover; object-position:center 30%;" />
+            <div style="position:absolute; inset:0; background:rgba(10,10,10,0.82);"></div>
+        </div>
+        <div class="container" style="position:relative; z-index:1; text-align:center;">
+            <span class="section-label reveal">¿Listo para comenzar?</span>
+            <h2 class="section-title reveal" style="margin-bottom:1.5rem;">Reservá tu Fecha<br><em>Hoy Mismo</em></h2>
+            <p style="font-size:0.85rem; color:var(--gray-light); margin-bottom:3rem;" class="reveal">
+                Agendas limitadas · Disponibilidad exclusiva · Atención personalizada
+            </p>
+            <div style="display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap;" class="reveal">
+                <a href="reservations.html" class="btn btn-solid"><span>✦ Reservar Ahora</span></a>
+                <a href="https://wa.me/595993570100?text=Hola,%20quisiera%20consultar%20disponibilidad%20en%20Imperivm%20Eventos"
+                    target="_blank" class="btn"><span>Hablar por WhatsApp</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ════════════════════════════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-logo" style="font-size:1.8rem; margin-bottom:1.25rem;">
+                        IMPERIVM
+                        <span>Eventos · Ciudad del Este</span>
+                    </div>
+                    <p>Transformamos tus celebraciones en experiencias inolvidables. El estándar más alto en eventos de
+                        lujo en Paraguay.</p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/imperivmeventos" target="_blank" class="social-btn"
+                            aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="https://facebook.com/ImperivmEventos" target="_blank" class="social-btn"
+                            aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/595993570100" target="_blank" class="social-btn" aria-label="WhatsApp">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>El Salón</h4>
+                    <ul>
+                        <li><a href="venues.html">Salón Imperial</a></li>
+                        <li><a href="venues.html#capacity">Capacidades</a></li>
+                        <li><a href="gallery.html">Galería de Fotos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Eventos</h4>
+                    <ul>
+                        <li><a href="services.html">Bodas</a></li>
+                        <li><a href="services.html">Graduaciones</a></li>
+                        <li><a href="services.html">Quinceañeras</a></li>
+                        <li><a href="services.html">Corporativos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="contact.html">Ciudad del Este, Paraguay</a></li>
+                        <li><a href="tel:+595986141876">0986 141 876</a></li>
+                        <li><a href="tel:+5980993570100">0993 570 100</a></li>
+                        <li><a href="reservations.html">Reserva Online</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>DEMO PARA IMPERIVM</p>
+                <p>DESARROLLADO POR MATHIAS GALEANO</p>
+            </div>
+        </div>
+    </footer>
+
+        <!-- ═══ BOOKING FLOAT ═════════════════════════════════════════════════════ -->
+    <a class="booking-float" href="reservations.html" title="Reservar Evento" aria-label="Reservar">
+        ✦ Reservar
+    </a>
+
+    <!-- ═══ WHATSAPP FLOAT ════════════════════════════════════════════════════ -->
+    <a class="whatsapp-float"
+        href="https://wa.me/595993570100?text=Hola,%20quisiera%20consultar%20sobre%20Imperivm%20Eventos"
+        target="_blank" title="Contactar por WhatsApp" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <!-- ═══ LIGHTBOX ══════════════════════════════════════════════════════════ -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-close" id="lightboxClose">✕</div>
+        <img src="" alt="Preview" id="lightboxImg" />
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

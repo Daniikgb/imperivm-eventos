@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería de Eventos — Imperivm Eventos · Ciudad del Este</title>
+    <meta name="description"
+        content="Galería de bodas, graduaciones, quinceañeras y eventos corporativos realizados en el Salón Imperial de Imperivm Eventos en Ciudad del Este, Paraguay." />
+    <meta name="keywords"
+        content="galería bodas Paraguay, fotos eventos Ciudad del Este, galería quinceañeras Paraguay, fotos salón imperial Paraguay" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/jpeg" href="logo.jpg" /><text y='.9em' font-size='90'>👑</text></svg>" />
+    <style>
+        .gallery-filter {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.5rem;
+            font-size: 0.6rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            border: 1px solid var(--border);
+            color: var(--gray);
+            transition: var(--transition-fast);
+            cursor: pointer;
+            background: transparent;
+            font-family: var(--sans);
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            background: rgba(201, 168, 76, 0.06);
+        }
+
+        .gallery-full {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+        }
+
+        .gallery-full .gallery-item {
+            aspect-ratio: 4/3;
+            overflow: hidden;
+        }
+
+        .gallery-full .gallery-item.tall {
+            aspect-ratio: 3/4;
+            grid-row: span 2;
+        }
+
+        .gallery-full .gallery-item.wide {
+            grid-column: span 2;
+            aspect-ratio: 16/9;
+        }
+
+        @media(max-width:768px) {
+            .gallery-full {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-full .gallery-item.wide {
+                grid-column: span 1;
+                aspect-ratio: 4/3;
+            }
+
+            .gallery-full .gallery-item.tall {
+                aspect-ratio: 4/3;
+                grid-row: span 1;
+            }
+        }
+
+        @media(max-width:480px) {
+            .gallery-full {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ═══ SPLASH SCREEN ═════════════════════════════════════════════════════ -->
+    <div id="splash-screen" style="position:fixed; inset:0; z-index:99999; background-color:#ffffff; display:flex; align-items:center; justify-content:center; transition:opacity 0.6s ease; opacity:1;">
+        <img src="logo.jpg" alt="Imperivm Eventos Logo" style="width:150px; height:auto; animation:pulse-splash 1.5s infinite alternate;">
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+                const splash = document.getElementById('splash-screen');
+                if (splash) {
+                    splash.style.opacity = '0';
+                    setTimeout(() => splash.remove(), 600);
+                }
+            }, 1000);
+        });
+    </script>
+
+
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">IMPERIVM<span>Eventos · Ciudad del Este</span></a>
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="venues.html">Salón</a>
+                <a href="gallery.html" style="color:var(--gold)">Galería</a>
+                <a href="services.html">Servicios</a>
+                <a href="reservations.html">Reservas</a>
+                <a href="contact.html">Contacto</a>
+                <a href="reservations.html" class="btn btn-solid nav-cta"><span>Reservar</span></a>
+            </div>
+            <button class="nav-hamburger" id="hamburger"
+                aria-label="Menú"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="nav-mobile" id="mobileMenu">
+        <a href="index.html" onclick="closeMobile()">Inicio</a>
+        <a href="venues.html" onclick="closeMobile()">Salón</a>
+        <a href="gallery.html" onclick="closeMobile()">Galería</a>
+        <a href="services.html" onclick="closeMobile()">Servicios</a>
+        <a href="reservations.html" onclick="closeMobile()">Reservas</a>
+        <a href="contact.html" onclick="closeMobile()">Contacto</a>
+    </div>
+
+    <div class="page-header">
+        <div class="page-header-bg">
+            <img src="catalogo/Screenshot 2026-03-07 183213.png" alt="Galería Imperivm" />
+        </div>
+        <div class="page-header-overlay"></div>
+        <div class="page-header-content">
+            <span class="section-label">Momentos Únicos</span>
+            <h1>Galería de <em>Eventos</em></h1>
+            <p>Bodas · Graduaciones · Quinceañeras · Corporativos</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <!-- Filters -->
+            <div class="gallery-filter reveal">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="bodas">Bodas</button>
+                <button class="filter-btn" data-filter="decoracion">Decoración</button>
+                <button class="filter-btn" data-filter="salon">El Salón</button>
+                <button class="filter-btn" data-filter="exterior">Exterior</button>
+            </div>
+
+            <!-- Gallery Grid — all 15 catalog images -->
+            <div class="gallery-full reveal" id="galleryGrid">
+
+                <div class="gallery-item tall" data-cat="salon">
+                    <img src="catalogo/Screenshot 2026-03-07 183213.png" alt="Salón Imperial decorado para boda floral"
+                        loading="lazy" />
+                    <div class="gallery-item-overlay"><span class="gallery-label">Salón Imperial — Boda Floral</span>
+                    </div>
+                </div>
+                <div class="gallery-item wide" data-cat="salon">
+                    <img src="catalogo/Screenshot 2026-03-07 183333.png" alt="Salón Imperial vista aérea"
+                        loading="lazy" />
+                    <div class="gallery-item-overlay"><span class="gallery-label">Vista General del Salón</span></div>
+                </div>
+                <div class="gallery-item" data-cat="salon">
+                    <img src="catalogo/Screenshot 2026-03-07 183241.png" alt="Salón Imperial iluminación especial"
+                        loading="lazy" />
+                    <div class="gallery-item-overlay"><span class="gallery-label">Iluminación Nocturna</span></div>
+                </div>
+
+                <div class="gallery-item" data-cat="bodas">
+                    <img src="catalogo/Screenshot 2026-03-07 183059.png" alt="Mesa de torta de boda - jardín verde"
+                        loading="lazy" />
+                    <div class="gallery-item-overlay"><span class="gallery-label">Boda — Mesa de Torta</span></div>
+                </div>
+                <div class="gallery-item" data-cat="bodas">
+                    <img src="catalogo/Screenshot 2026-03-07 183113.png" alt="Mesa de torta boda verde"
+                        loading="lazy" />
+                    <div class="gallery-item-overlay"><span class="gallery-label">Boda Elegante</span></div>
+                </div>
+                <div class="gallery-item tall" data-cat="bodas">
+                    <img src="catalogo/Screenshot 2026-03-07 183219.png" alt="Decoración boda azul" loading="lazy" />
+                    <div class="gallery-item-overlay"><span class="gallery-label">Boda — Decoración Azul</span></div>
+                </div>
+
+                <div class="gallery-item wide" data-cat="bodas">
+                    <img src="catalogo/Screenshot 2026-03-07 183325.png" alt="Escenografía boda tropical"
+                        loading="lazy" />
+                    <div class="gallery-item-overlay"><span class="gallery-label">Escenografía Nupcial</span></div>
+                </div>
+                <div class="gallery-item" data-cat="decoracion">
+                    <img src="catalogo/Screenshot 2026-03-07 183225.png" alt="Decoración botánica salón"
+                        loading="lazy" />
+                    <div class="gallery-item-overlay"><span class="gallery-label">Decoración Botánica</span></div>
+                </div>
+
+                <div class="gallery-item" data-cat="salon">
+                    <img src="catalogo/Screenshot 2026-03-07 183105.png" alt="Salón Imperial montaje vacío"
+                        loading="lazy" />
+                    <div class="gallery-item-overlay"><span class="gallery-label">Montaje Imperial</span></div>
+                </div>
+                <div class="gallery-item" data-cat="decoracion">
+                    <img src="catalogo/Screenshot 2026-03-07 183048.png" alt="Gala esferas doradas decoración"
+                        loading="lazy" />
+                    <div class="gallery-item-overlay"><span class="gallery-label">Gala — Esferas Doradas</span></div>
+                </div>
+
+                <div class="gallery-item" data-cat="exterior">
+                    <img src="catalogo/Screenshot 2026-03-07 183125.png" alt="Fachada Imperivm de día" loading="lazy" />
+                    <div class="gallery-item-overlay"><span class="gallery-label">Fachada — Día</span></div>
+                </div>
+                <div class="gallery-item" data-cat="exterior">
+                    <img src="catalogo/Screenshot 2026-03-07 183232.png" alt="Fachada Imperivm atardecer"
+                        loading="lazy" />
+                    <div class="gallery-item-overlay"><span class="gallery-label">Fachada — Atardecer</span></div>
+                </div>
+                <div class="gallery-item" data-cat="exterior">
+                    <img src="catalogo/Screenshot 2026-03-07 183247.png" alt="Fachada Imperivm noche" loading="lazy" />
+                    <div class="gallery-item-overlay"><span class="gallery-label">Fachada — Noche</span></div>
+                </div>
+                <div class="gallery-item" data-cat="exterior">
+                    <img src="catalogo/Screenshot 2026-03-07 183303.png" alt="Pasillo estatua Imperivm"
+                        loading="lazy" />
+                    <div class="gallery-item-overlay"><span class="gallery-label">Pasillo de Entrada</span></div>
+                </div>
+                <div class="gallery-item" data-cat="exterior">
+                    <img src="catalogo/Screenshot 2026-03-07 183144.png" alt="Fachada Imperivm blanco y negro"
+                        loading="lazy" />
+                    <div class="gallery-item-overlay"><span class="gallery-label">El Salón — Arte</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-dark" style="text-align:center;">
+        <div class="container">
+            <span class="section-label reveal">¿Te inspiraste?</span>
+            <h2 class="section-title reveal" style="margin-bottom:1.5rem;">Creá tu Propio<br><em>Momento Único</em></h2>
+            <a href="reservations.html" class="btn btn-solid reveal"><span>✦ Reservar Ahora</span></a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-logo" style="font-size:1.8rem; margin-bottom:1.25rem;">IMPERIVM<span>Eventos ·
+                            Ciudad del Este</span></div>
+                    <p>Transformamos tus celebraciones en experiencias inolvidables.</p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/imperivmeventos" target="_blank" class="social-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="https://facebook.com/ImperivmEventos" target="_blank" class="social-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="https://wa.me/595993570100" target="_blank" class="social-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>El Salón</h4>
+                    <ul>
+                        <li><a href="venues.html">Salón Imperial</a></li>
+                        <li><a href="venues.html#capacity">Capacidades</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Eventos</h4>
+                    <ul>
+                        <li><a href="services.html">Bodas</a></li>
+                        <li><a href="services.html">Graduaciones</a></li>
+                        <li><a href="services.html">Quinceañeras</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="contact.html">Ciudad del Este, PY</a></li>
+                        <li><a href="tel:+595986141876">0986 141 876</a></li>
+                        <li><a href="tel:+5980993570100">0993 570 100</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>DEMO PARA IMPERIVM</p>
+                <p>DESARROLLADO POR MATHIAS GALEANO</p>
+            </div>
+        </div>
+    </footer>
+
+    <a class="whatsapp-float" href="https://wa.me/595993570100" target="_blank" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-close" id="lightboxClose">✕</div>
+        <img src="" alt="" id="lightboxImg" />
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

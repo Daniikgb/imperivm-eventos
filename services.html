@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servicios — Imperivm Eventos · Ciudad del Este</title>
+    <meta name="description"
+        content="Servicios completos de organización de eventos de lujo: planificación, decoración, catering premium, iluminación escénica, audio profesional y fotografía." />
+    <meta name="keywords"
+        content="organización de eventos Paraguay, catering lujo Ciudad del Este, decoración de bodas Paraguay, planificación eventos Ciudad del Este" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/jpeg" href="logo.jpg" /><text y='.9em' font-size='90'>👑</text></svg>" />
+</head>
+
+<body>
+
+    <!-- ═══ SPLASH SCREEN ═════════════════════════════════════════════════════ -->
+    <div id="splash-screen" style="position:fixed; inset:0; z-index:99999; background-color:#ffffff; display:flex; align-items:center; justify-content:center; transition:opacity 0.6s ease; opacity:1;">
+        <img src="logo.jpg" alt="Imperivm Eventos Logo" style="width:150px; height:auto; animation:pulse-splash 1.5s infinite alternate;">
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+                const splash = document.getElementById('splash-screen');
+                if (splash) {
+                    splash.style.opacity = '0';
+                    setTimeout(() => splash.remove(), 600);
+                }
+            }, 1000);
+        });
+    </script>
+
+
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">IMPERIVM<span>Eventos · Ciudad del Este</span></a>
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="venues.html">Salón</a>
+                <a href="gallery.html">Galería</a>
+                <a href="services.html" style="color:var(--gold)">Servicios</a>
+                <a href="reservations.html">Reservas</a>
+                <a href="contact.html">Contacto</a>
+                <a href="reservations.html" class="btn btn-solid nav-cta"><span>Reservar</span></a>
+            </div>
+            <button class="nav-hamburger" id="hamburger"
+                aria-label="Menú"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="nav-mobile" id="mobileMenu">
+        <a href="index.html" onclick="closeMobile()">Inicio</a>
+        <a href="venues.html" onclick="closeMobile()">Salón</a>
+        <a href="gallery.html" onclick="closeMobile()">Galería</a>
+        <a href="services.html" onclick="closeMobile()">Servicios</a>
+        <a href="reservations.html" onclick="closeMobile()">Reservas</a>
+        <a href="contact.html" onclick="closeMobile()">Contacto</a>
+    </div>
+
+    <div class="page-header">
+        <div class="page-header-bg">
+            <img src="catalogo/Screenshot 2026-03-07 183325.png" alt="Servicios Imperivm" />
+        </div>
+        <div class="page-header-overlay"></div>
+        <div class="page-header-content">
+            <span class="section-label">Nuestras Especialidades</span>
+            <h1>Servicios de <em>Excelencia</em></h1>
+            <p>Todo lo que necesitás · Un solo lugar · Resultado perfecto</p>
+        </div>
+    </div>
+
+    <!-- MAIN SERVICES -->
+    <section class="section">
+        <div class="container">
+
+            <!-- Planificación -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; margin-bottom:7rem;">
+                <div class="reveal">
+                    <img src="catalogo/Screenshot 2026-03-07 183048.png" alt="Planificación de eventos"
+                        style="width:100%; aspect-ratio:4/3; object-fit:cover;" />
+                </div>
+                <div class="reveal reveal-delay-1">
+                    <span class="section-label">Servicio Premium</span>
+                    <h2 class="section-title" style="font-size:2.5rem; margin-bottom:1.25rem;">Planificación
+                        <em>Integral</em>
+                    </h2>
+                    <p style="font-size:0.85rem; color:var(--gray-light); line-height:1.9; margin-bottom:1.5rem;">
+                        Nuestro equipo de Wedding & Event Planners certificados trabajará codo a codo con vos desde el
+                        primer contacto hasta el último baile. Coordinamos cada proveedor, manejamos los tiempos y
+                        resolvemos imprevistos para que solo tengas que disfrutar.</p>
+                    <ul class="feature-list">
+                        <li>Asesoramiento personalizado desde la concepción del evento</li>
+                        <li>Diseño y dirección del día del evento</li>
+                        <li>Coordinación de proveedores externos</li>
+                        <li>Gestión de cronograma y tiempos</li>
+                        <li>Presupuesto detallado y transparente</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Decoración -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; margin-bottom:7rem;">
+                <div class="reveal reveal-delay-1" style="order:2;">
+                    <img src="catalogo/Screenshot 2026-03-07 183059.png" alt="Decoración floral de lujo"
+                        style="width:100%; aspect-ratio:4/3; object-fit:cover;" />
+                </div>
+                <div class="reveal" style="order:1;">
+                    <span class="section-label">Arte & Estética</span>
+                    <h2 class="section-title" style="font-size:2.5rem; margin-bottom:1.25rem;">Decoración <em>de
+                            Lujo</em></h2>
+                    <p style="font-size:0.85rem; color:var(--gray-light); line-height:1.9; margin-bottom:1.5rem;">
+                        Nuestro equipo de diseñadores transforma los espacios en ambientes mágicos. Trabajamos con las
+                        mejores floristerías, importamos materiales exclusivos y creamos conceptos únicos que reflejan
+                        tu personalidad e historia.</p>
+                    <ul class="feature-list">
+                        <li>Arreglos florales con flores frescas importadas</li>
+                        <li>Centros de mesa personalizados</li>
+                        <li>Decoración temática y ambiental</li>
+                        <li>Arcos florales, columnas y estructuras</li>
+                        <li>Liners, cubremesas y vajilla de lujo</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Catering -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; margin-bottom:7rem;">
+                <div class="reveal">
+                    <img src="catalogo/Screenshot 2026-03-07 183105.png" alt="Catering de lujo"
+                        style="width:100%; aspect-ratio:4/3; object-fit:cover;" />
+                </div>
+                <div class="reveal reveal-delay-1">
+                    <span class="section-label">Alta Gastronomía</span>
+                    <h2 class="section-title" style="font-size:2.5rem; margin-bottom:1.25rem;">Catering <em>Premium</em>
+                    </h2>
+                    <p style="font-size:0.85rem; color:var(--gray-light); line-height:1.9; margin-bottom:1.5rem;">
+                        Nuestra cocina está dirigida por chefs formados en las mejores escuelas culinarias. Diseñamos
+                        menús personalizados que combinan la gastronomía local e internacional, con opciones para todas
+                        las preferencias y restricciones alimentarias.</p>
+                    <ul class="feature-list">
+                        <li>Menús a medida con chef ejecutivo</li>
+                        <li>Cocina en vivo (show cooking)</li>
+                        <li>Barra libre premium con mixología</li>
+                        <li>Servicio de mozos con guantes blancos</li>
+                        <li>Mesa de dulces y mesa de quesos</li>
+                        <li>Opciones vegetarianas, veganas y sin gluten</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Iluminación & Audio -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-bottom:4rem;">
+                <div class="card reveal" style="display:flex; flex-direction:column;">
+                    <div class="card-img">
+                        <img src="catalogo/Screenshot 2026-03-07 183241.png" alt="Iluminación de eventos"
+                            loading="lazy" />
+                    </div>
+                    <div class="card-body" style="flex:1;">
+                        <div class="service-name">Iluminación Escénica</div>
+                        <p class="card-desc">Diseño de iluminación profesional con tecnología LED de última generación,
+                            efectos de luz dinámica, uplighting, gobo personalizados con iniciales y fechas especiales.
+                            Creamos la atmósfera perfecta para cada momento de tu evento.</p>
+                        <ul class="feature-list" style="margin-top:1rem;">
+                            <li>Moving heads y wash LED</li>
+                            <li>Gobos con tu nombre o monograma</li>
+                            <li>Efectos especiales: niebla, hielo seco</li>
+                            <li>Iluminación de mesa y velas LED</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card reveal reveal-delay-1" style="display:flex; flex-direction:column;">
+                    <div class="card-img">
+                        <img src="catalogo/Screenshot 2026-03-07 183213.png" alt="Audio profesional" loading="lazy" />
+                    </div>
+                    <div class="card-body" style="flex:1;">
+                        <div class="service-name">Audio Profesional</div>
+                        <p class="card-desc">Equipos de sonido de alta fidelidad con cobertura perfecta en todo el
+                            salón. DJ booth de última generación, consolas profesionales y personal técnico
+                            especializado para que nada falle en el gran día.</p>
+                        <ul class="feature-list" style="margin-top:1rem;">
+                            <li>Sistema de audio line array profesional</li>
+                            <li>DJ con repertorio personalizado</li>
+                            <li>Micrófonos inalámbricos</li>
+                            <li>Soporte técnico durante el evento</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EVENT TYPES SECTION -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-center reveal" style="margin-bottom:4rem;">
+                <span class="section-label">Especialidades</span>
+                <h2 class="section-title">Expertos en Cada <em>Celebración</em></h2>
+            </div>
+            <div class="grid-3">
+                <div class="card reveal" style="overflow:hidden; position:relative;">
+                    <div class="card-img">
+                        <img src="catalogo/Screenshot 2026-03-07 183325.png" alt="Bodas Paraguay" loading="lazy" />
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tag">Nupcias</div>
+                        <div class="card-title">Bodas de Lujo</div>
+                        <p class="card-desc">El día más importante de tu vida merece el escenario más espectacular.
+                            Especializados en bodas desde íntimas hasta de 600 invitados, con coordinación de ceremonia
+                            y recepción.</p>
+                    </div>
+                </div>
+                <div class="card reveal reveal-delay-1">
+                    <div class="card-img">
+                        <img src="catalogo/Screenshot 2026-03-07 183333.png" alt="Graduaciones Ciudad del Este"
+                            loading="lazy" />
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tag">Logros</div>
+                        <div class="card-title">Graduaciones</div>
+                        <p class="card-desc">Celebrá el logro más importante de tu carrera académica. Salones equipados
+                            con proyección, sonido de conferencia y gastronomía de gala para grupos de todos los
+                            tamaños.</p>
+                    </div>
+                </div>
+                <div class="card reveal reveal-delay-2">
+                    <div class="card-img">
+                        <img src="catalogo/Screenshot 2026-03-07 183219.png" alt="Quinceañeras Paraguay"
+                            loading="lazy" />
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tag">XV Años</div>
+                        <div class="card-title">Quinceañeras</div>
+                        <p class="card-desc">La fiesta de tus 15 merece ser mágica. Temáticas personalizadas, cotillón,
+                            mesa de dulces, DJ y una producción completa para una celebración que recordarás toda la
+                            vida.</p>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <div class="card-img">
+                        <img src="catalogo/Screenshot 2026-03-07 183048.png" alt="Eventos corporativos Paraguay"
+                            loading="lazy" />
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tag">Empresarial</div>
+                        <div class="card-title">Corporativos</div>
+                        <p class="card-desc">Conferencias, cenas de gala, teambuilding y lanzamientos de producto.
+                            Infraestructura tecnológica y logística impecable para eventos que representan tu marca.</p>
+                    </div>
+                </div>
+                <div class="card reveal reveal-delay-1">
+                    <div class="card-img">
+                        <img src="catalogo/Screenshot 2026-03-07 183059.png" alt="Baby shower lujo" loading="lazy" />
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tag">Celebración Familiar</div>
+                        <div class="card-title">Baby Shower</div>
+                        <p class="card-desc">Bienvenida al nuevo integrante con elegancia. Ambientación temática
+                            delicada, mesa de dulces personalizada y catering especial para una celebración familiar
+                            única.</p>
+                    </div>
+                </div>
+                <div class="card reveal reveal-delay-2">
+                    <div class="card-img">
+                        <img src="catalogo/Screenshot 2026-03-07 183225.png" alt="Aniversarios" loading="lazy" />
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tag">Celebración Especial</div>
+                        <div class="card-title">Aniversarios & Galas</div>
+                        <p class="card-desc">Bodas de plata, bodas de oro, cumpleaños de décadas especiales.
+                            Celebraciones de alta gama con una producción que honra la importancia del momento.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:3rem;">
+                <a href="reservations.html" class="btn btn-solid reveal"><span>✦ Cotizá tu Evento</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-logo" style="font-size:1.8rem; margin-bottom:1.25rem;">IMPERIVM<span>Eventos ·
+                            Ciudad del Este</span></div>
+                    <p>Transformamos tus celebraciones en experiencias inolvidables.</p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/imperivmeventos" target="_blank" class="social-btn"
+                            aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="https://facebook.com/ImperivmEventos" target="_blank" class="social-btn"
+                            aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/595993570100" target="_blank" class="social-btn" aria-label="WhatsApp">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Salón</h4>
+                    <ul>
+                        <li><a href="venues.html">Salón Imperial</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Eventos</h4>
+                    <ul>
+                        <li><a href="services.html">Bodas</a></li>
+                        <li><a href="services.html">Graduaciones</a></li>
+                        <li><a href="services.html">Quinceañeras</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="contact.html">Ciudad del Este, PY</a></li>
+                        <li><a href="tel:+595971234567">0986 141 876</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>DEMO PARA IMPERIVM</p>
+                <p>DESARROLLADO POR MATHIAS GALEANO</p>
+            </div>
+        </div>
+    </footer>
+
+    <a class="whatsapp-float"
+        href="https://wa.me/595993570100?text=Hola,%20quisiera%20consultar%20sobre%20Imperivm%20Eventos"
+        target="_blank" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
