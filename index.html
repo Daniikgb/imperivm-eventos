@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/jpeg" href="logo.jpg" /><text y='.9em' font-size='90'>👑</text></svg>" />
+    <link rel="icon" type="image/jpeg" href="logo.jpg" />
 </head>
 
 <body>
@@ -47,13 +47,12 @@
                 <span>Eventos · Ciudad del Este</span>
             </a>
             <div class="nav-links">
-                <a href="index.html">Inicio</a>
-                <a href="venues.html">Salón</a>
-                <a href="gallery.html">Galería</a>
-                <a href="services.html">Servicios</a>
-                <a href="reservations.html">Reservas</a>
-                <a href="contact.html">Contacto</a>
-                <a href="reservations.html" class="btn btn-solid nav-cta"><span>Reservar</span></a>
+                <a href="#home">Inicio</a>
+                <a href="#venues">Salón</a>
+                <a href="#gallery">Galería</a>
+                <a href="#services">Servicios</a>
+                <a href="#contact">Contacto</a>
+                <a href="#reservas" class="btn btn-solid nav-cta"><span>Reservar</span></a>
             </div>
             <button class="nav-hamburger" id="hamburger" aria-label="Menú">
                 <span></span><span></span><span></span>
@@ -63,12 +62,11 @@
 
     <!-- Mobile Menu -->
     <div class="nav-mobile" id="mobileMenu">
-        <a href="index.html" onclick="closeMobile()">Inicio</a>
-        <a href="venues.html" onclick="closeMobile()">Salón</a>
-        <a href="gallery.html" onclick="closeMobile()">Galería</a>
-        <a href="services.html" onclick="closeMobile()">Servicios</a>
-        <a href="reservations.html" onclick="closeMobile()">Reservas</a>
-        <a href="contact.html" onclick="closeMobile()">Contacto</a>
+        <a href="#home" onclick="closeMobile()">Inicio</a>
+        <a href="#venues" onclick="closeMobile()">Salón</a>
+        <a href="#gallery" onclick="closeMobile()">Galería</a>
+        <a href="#services" onclick="closeMobile()">Servicios</a>
+        <a href="#contact" onclick="closeMobile()">Contacto</a>
     </div>
 
     <!-- ═══ HERO ══════════════════════════════════════════════════════════════ -->
@@ -87,8 +85,8 @@
             <p class="hero-tagline">Salones de eventos exclusivos · Bodas · Graduaciones · Quinceañeras · Empresariales
             </p>
             <div class="hero-actions">
-                <a href="reservations.html" class="btn btn-solid"><span>✦ Reservar mi Evento</span></a>
-                <a href="venues.html" class="btn"><span>Ver el Salón</span></a>
+                <a href="#reservas" class="btn btn-solid"><span>✦ Reservar mi Evento</span></a>
+                <a href="#venues" class="btn"><span>Ver el Salón</span></a>
             </div>
         </div>
         <div class="hero-scroll">
@@ -101,7 +99,7 @@
     <!-- ═══ INTRO SECTION ═════════════════════════════════════════════════════ -->
     <section class="section">
         <div class="container">
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center;">
+            <div class="res-grid" style="gap:5rem; align-items:center;">
                 <div class="reveal">
                     <span class="section-label">Nuestra Esencia</span>
                     <h2 class="section-title">La <em>Excelencia</em><br>Define Cada Detalle</h2>
@@ -114,7 +112,7 @@
                         convierte cada evento en un momento irrepetible. Cada rincón fue diseñado pensando en la
                         grandiosidad de tu celebración.</p>
                     <br>
-                    <a href="venues.html" class="btn" style="margin-top:1rem;"><span>Conocer nuestro salón →</span></a>
+                    <a href="#venues" class="btn" style="margin-top:1rem;"><span>Conocer nuestro salón →</span></a>
                 </div>
                 <div class="reveal reveal-delay-1" style="position:relative;">
                     <img src="catalogo/Screenshot 2026-03-07 183059.png" alt="Decoración de boda Imperivm Eventos"
@@ -133,7 +131,7 @@
     </section>
 
     <!-- ═══ SERVICES PREVIEW ══════════════════════════════════════════════════ -->
-    <section class="section section-dark">
+    <section class="section section-dark" id="services">
         <div class="container">
             <div class="section-center reveal" style="margin-bottom:4rem;">
                 <span class="section-label">Lo que ofrecemos</span>
@@ -173,13 +171,13 @@
                 </div>
             </div>
             <div style="text-align:center; margin-top:3rem;">
-                <a href="services.html" class="btn reveal"><span>Ver todos los servicios →</span></a>
+    <!-- Button removed for One-Page App -->
             </div>
         </div>
     </section>
 
     <!-- ═══ VENUE PREVIEW ═════════════════════════════════════════════════════ -->
-    <section class="section">
+    <section class="section" id="venues">
         <div class="container">
             <div class="section-center reveal" style="margin-bottom:4rem;">
                 <span class="section-label">Nuestro Espacio</span>
@@ -187,7 +185,7 @@
             </div>
 
             <!-- Single venue: Salón Imperial -->
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-bottom:2rem;">
+            <div class="res-grid" style="gap:2rem; margin-bottom:2rem;">
                 <div class="reveal" style="overflow:hidden; aspect-ratio:4/3;">
                     <img src="catalogo/Screenshot 2026-03-07 183333.png" alt="Salón Imperial - vista general"
                         style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;"
@@ -199,7 +197,7 @@
                         onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
                 </div>
             </div>
-            <div class="card reveal" style="display:grid; grid-template-columns:1fr 1fr; gap:0; overflow:hidden;">
+            <div class="card reveal res-grid" style="gap:0; overflow:hidden;">
                 <div class="card-img" style="aspect-ratio:4/3;">
                     <img src="catalogo/Screenshot 2026-03-07 183105.png" alt="Salón Imperial interior" loading="lazy" />
                 </div>
@@ -213,8 +211,7 @@
                         <div><span>Capacidad</span><strong>Hasta 800 personas</strong></div>
                         <div><span>Ambiente</span><strong>Clásico & Majestuoso</strong></div>
                     </div>
-                    <a href="venues.html" class="btn" style="margin-top:1.5rem; width:fit-content;"><span>Conocer más
-                            →</span></a>
+    <!-- Button removed for One-Page App -->
                 </div>
             </div>
         </div>
@@ -273,7 +270,7 @@
     </section>
 
     <!-- ═══ GALLERY PREVIEW ════════════════════════════════════════════════════ -->
-    <section class="section section-dark">
+    <section class="section section-dark" id="gallery">
         <div class="container">
             <div class="section-center reveal" style="margin-bottom:4rem;">
                 <span class="section-label">Galería</span>
@@ -307,7 +304,7 @@
             </div>
         </div>
         <div style="text-align:center; margin-top:3rem;">
-            <a href="gallery.html" class="btn reveal"><span>Ver galería completa →</span></a>
+    <!-- Button removed for One-Page App -->
         </div>
     </section>
 
@@ -356,15 +353,287 @@
                 Agendas limitadas · Disponibilidad exclusiva · Atención personalizada
             </p>
             <div style="display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap;" class="reveal">
-                <a href="reservations.html" class="btn btn-solid"><span>✦ Reservar Ahora</span></a>
+                <a href="#reservas" class="btn btn-solid"><span>✦ Reservar Ahora</span></a>
                 <a href="https://wa.me/595993570100?text=Hola,%20quisiera%20consultar%20disponibilidad%20en%20Imperivm%20Eventos"
                     target="_blank" class="btn"><span>Hablar por WhatsApp</span></a>
             </div>
         </div>
     </section>
 
+    <!-- RESERVATION FORM -->
+    <section class="section section-mid" id="reservas">
+        <div class="container">
+            <div class="res-grid" style="gap:5rem; align-items:start;">
+                <!-- Info Column -->
+                <div class="reveal">
+                    <span class="section-label">Información</span>
+                    <h2 class="section-title" style="font-size:2.2rem; margin-bottom:2rem;">Consulta <em>Sin
+                            Compromiso</em></h2>
+                    <p style="font-size:0.85rem; color:var(--gray-light); line-height:1.9; margin-bottom:2.5rem;">
+                        Completá el formulario y nuestro equipo de expertos en eventos te contactará para armar una
+                        cotización personalizada y sin costo.
+                    </p>
+                    <div class="contact-info-item">
+                        <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
+                        <div>
+                            <div class="contact-info-label">Agendas Disponibles</div>
+                            <div class="contact-info-text">Lunes a Sábados · 9:00 – 19:00</div>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
+                        <div>
+                            <div class="contact-info-label">Respuesta Rápida</div>
+                            <div class="contact-info-text">Respondemos en menos de 24 horas hábiles</div>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+                        <div>
+                            <div class="contact-info-label">WhatsApp Directo</div>
+                            <div class="contact-info-text">
+                                <a href="https://wa.me/595993570100" target="_blank" style="color:var(--gold);">+595
+                                    971
+                                    234 567</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:2.5rem; padding:1.5rem; border:1px solid var(--border);">
+                        <div
+                            style="font-size:0.6rem; letter-spacing:0.4em; text-transform:uppercase; color:var(--gold); margin-bottom:1rem;">
+                            Disponibilidad 2024/2025</div>
+                        <div style="font-size:0.8rem; color:var(--gray-light); line-height:1.8;">
+                            ⚠️ Fechas de alta demanda: diciembre, enero, marzo y junio.<br>
+                            Recomendamos reservar con al menos 3 meses de anticipación.
+                        </div>
+                    </div>
+
+                    <div style="margin-top:1.5rem;">
+                        <a href="https://wa.me/595993570100?text=Hola,%20quisiera%20reservar%20un%20evento%20en%20Imperivm%20Eventos"
+                            target="_blank" class="btn btn-solid" style="width:100%; justify-content:center;">
+                            <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> Consultar por WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="reveal reveal-delay-1">
+                    <div style="padding:3rem; border:1px solid var(--border); background:var(--dark);">
+                        <h3
+                            style="font-family:var(--serif); font-size:1.6rem; font-weight:400; color:var(--white); margin-bottom:2rem;">
+                            Formulario de <em style="color:var(--gold); font-style:italic;">Reserva</em></h3>
+
+                        <form id="reservationForm" onsubmit="handleSubmit(event)">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="res-nombre">Nombre Completo *</label>
+                                    <input type="text" id="res-nombre" name="nombre" class="form-control"
+                                        placeholder="Ej: María González" required />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="res-apellido">Apellido *</label>
+                                    <input type="text" id="res-apellido" name="apellido" class="form-control"
+                                        placeholder="Ej: Pérez" required />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="res-email">Correo Electrónico *</label>
+                                    <input type="email" id="res-email" name="email" class="form-control"
+                                        placeholder="nombre@email.com" required />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="res-telefono">Teléfono / WhatsApp *</label>
+                                    <input type="tel" id="res-telefono" name="telefono" class="form-control"
+                                        placeholder="+595 9XX XXX XXX" required />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="res-tipo">Tipo de Evento *</label>
+                                    <select id="res-tipo" name="tipo" class="form-control" required>
+                                        <option value="" disabled selected>Seleccioná tu evento</option>
+                                        <option value="boda">Boda</option>
+                                        <option value="graduacion">Graduación</option>
+                                        <option value="quince">Quinceañera (XV Años)</option>
+                                        <option value="corporativo">Evento Corporativo</option>
+                                        <option value="baby-shower">Baby Shower</option>
+                                        <option value="aniversario">Aniversario / Gala</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="res-fecha">Fecha del Evento *</label>
+                                    <input type="date" id="res-fecha" name="fecha" class="form-control" required />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="res-invitados">Cantidad de Invitados *</label>
+                                <select id="res-invitados" name="invitados" class="form-control" required>
+                                    <option value="" disabled selected>Estimado de invitados</option>
+                                    <option value="50-100">50 – 100 personas</option>
+                                    <option value="100-200">100 – 200 personas</option>
+                                    <option value="200-350">200 – 350 personas</option>
+                                    <option value="350-500">350 – 500 personas</option>
+                                    <option value="500+">Más de 500 personas</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="res-mensaje">Detalles adicionales</label>
+                                <textarea id="res-mensaje" name="mensaje" class="form-control" rows="4"
+                                    placeholder="Contanos mas sobre tu evento, temas, colores, requerimientos especiales..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-solid"
+                                style="width:100%; justify-content:center; padding:1.25rem;">
+                                <span>✦ Enviar Solicitud de Reserva</span>
+                            </button>
+                        </form>
+
+                        <div class="success-msg" id="successMsg">
+                            <h3>✦ ¡Solicitud Recibida!</h3>
+                            <p>Gracias por contactarnos. Un asesor de Imperivm Eventos se comunicará con vos en las
+                                próximas 24 horas para confirmar disponibilidad y personalizar tu evento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CONTACT & MAP ════════════════════════════════════════════════════ -->
+    <section class="section" style="padding-top:2rem;">
+        <div class="container">
+            <div class="res-grid contact-grid-mobile" style="gap:5rem; align-items:start;">
+                <div class="reveal">
+                    <span class="section-label">Información de Contacto</span>
+                    <h2 class="section-title" style="font-size:2.5rem; margin-bottom:2.5rem;">Hablemos de tu
+                        <em>Evento</em>
+                    </h2>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg></div>
+                        <div>
+                            <div class="contact-info-label">Dirección</div>
+                            <div class="contact-info-text">
+                                Av. Monseñor Rodríguez y Curupayty<br>
+                                Ciudad del Este, Alto Paraná<br>
+                                Paraguay
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg></div>
+                        <div>
+                            <div class="contact-info-label">Teléfono</div>
+                            <div class="contact-info-text">
+                                <a href="tel:+595971234567" style="color:var(--ivory);">0986 141 876</a><br>
+                                <a href="tel:+595993570100" style="color:var(--ivory);">0993 570 100</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg></div>
+                        <div>
+                            <div class="contact-info-label">Email</div>
+                            <div class="contact-info-text">
+                                <a href="mailto:info@imperivmeventos.com.py"
+                                    style="color:var(--ivory);">info@imperivmeventos.com.py</a><br>
+                                <a href="mailto:reservas@imperivmeventos.com.py"
+                                    style="color:var(--ivory);">reservas@imperivmeventos.com.py</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg></div>
+                        <div>
+                            <div class="contact-info-label">Horario de Atención</div>
+                            <div class="contact-info-text">
+                                Lunes – Viernes: 9:00 – 19:00 hs<br>
+                                Sábados: 9:00 – 14:00 hs<br>
+                                WhatsApp: Horario extendido
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal reveal-delay-1">
+                    <div style="padding:3rem; border:1px solid var(--border); background:var(--dark);" id="contact-form-container">
+                        <h3
+                            style="font-family:var(--serif); font-size:1.6rem; font-weight:400; color:var(--white); margin-bottom:2rem;">
+                            Envianos un <em style="color:var(--gold); font-style:italic;">Mensaje</em>
+                        </h3>
+                        <form id="contactForm" onsubmit="event.preventDefault(); document.getElementById('contactForm').style.display='none'; document.getElementById('contactSuccess').style.display='block';">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="con-nombre">Nombre *</label>
+                                    <input type="text" id="con-nombre" class="form-control" placeholder="Tu nombre" required />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="con-tel">Teléfono *</label>
+                                    <input type="tel" id="con-tel" class="form-control" placeholder="+595 9XX XXX XXX" required />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="con-email">Email *</label>
+                                <input type="email" id="con-email" class="form-control" placeholder="tu@email.com" required />
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="con-mensaje">Mensaje *</label>
+                                <textarea id="con-mensaje" class="form-control" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-solid" style="width:100%; justify-content:center;">
+                                <span>Enviar Mensaje</span>
+                            </button>
+                        </form>
+                        <div id="contactSuccess"
+                            style="display:none; padding:1.5rem; background:rgba(201,168,76,0.1); border:1px solid var(--gold); text-align:center; margin-top:1.5rem;">
+                            <p
+                                style="font-family:var(--serif); color:var(--gold); font-size:1.2rem; margin-bottom:0.5rem;">
+                                ✦ Mensaje Enviado</p>
+                            <p style="font-size:0.82rem; color:var(--gray-light);">Gracias por contactarnos. Te
+                                responderemos a la brevedad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP -->
+    <section style="margin-bottom:0;">
+        <div class="map-wrapper reveal">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600.4132338243617!2d-54.6256141!3d-25.5297196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f68feef0000001%3A0x4751ef87b193e1bb!2sImperivm%20Eventos!5e0!3m2!1ses!2spy!4v1710000000000!5m2!1ses!2spy"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                title="Ubicación Imperivm Eventos - Ciudad del Este, Paraguay">
+            </iframe>
+        </div>
+    </section>
+
     <!-- ═══ FOOTER ════════════════════════════════════════════════════════════ -->
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
@@ -404,27 +673,26 @@
                 <div class="footer-col">
                     <h4>El Salón</h4>
                     <ul>
-                        <li><a href="venues.html">Salón Imperial</a></li>
-                        <li><a href="venues.html#capacity">Capacidades</a></li>
-                        <li><a href="gallery.html">Galería de Fotos</a></li>
+                        <li><a href="#venues">Salón Imperial</a></li>
+                        <li><a href="#gallery">Galería de Fotos</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Eventos</h4>
                     <ul>
-                        <li><a href="services.html">Bodas</a></li>
-                        <li><a href="services.html">Graduaciones</a></li>
-                        <li><a href="services.html">Quinceañeras</a></li>
-                        <li><a href="services.html">Corporativos</a></li>
+                        <li><a href="#services">Bodas</a></li>
+                        <li><a href="#services">Graduaciones</a></li>
+                        <li><a href="#services">Quinceañeras</a></li>
+                        <li><a href="#services">Corporativos</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Contacto</h4>
                     <ul>
-                        <li><a href="contact.html">Ciudad del Este, Paraguay</a></li>
+                        <li><a href="#contact">Ciudad del Este, Paraguay</a></li>
                         <li><a href="tel:+595986141876">0986 141 876</a></li>
                         <li><a href="tel:+5980993570100">0993 570 100</a></li>
-                        <li><a href="reservations.html">Reserva Online</a></li>
+                        <li><a href="#reservas">Reserva Online</a></li>
                     </ul>
                 </div>
             </div>
@@ -436,7 +704,7 @@
     </footer>
 
         <!-- ═══ BOOKING FLOAT ═════════════════════════════════════════════════════ -->
-    <a class="booking-float" href="reservations.html" title="Reservar Evento" aria-label="Reservar">
+    <a class="booking-float" href="#reservas" title="Reservar Evento" aria-label="Reservar">
         ✦ Reservar
     </a>
 

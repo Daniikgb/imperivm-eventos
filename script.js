@@ -203,4 +203,16 @@
         document.addEventListener('mouseleave', () => { trail.style.opacity = '0'; });
     }
 
+    /* ── Reservation Form Handler ─────────────────────────────────────────── */
+    window.handleSubmit = function (e) {
+        if (e) e.preventDefault();
+        const form = document.getElementById('reservationForm');
+        const success = document.getElementById('successMsg');
+        if (form && success) {
+            form.style.display = 'none';
+            success.style.display = 'block';
+            success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    };
+
 })();
