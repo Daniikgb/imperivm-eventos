@@ -40,6 +40,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -349,11 +350,13 @@ button {
   gap: 2.5rem;
   z-index: 999;
   transform: translateX(100%);
+  visibility: hidden;
   transition: var(--transition);
 }
 
 .nav-mobile.open {
   transform: translateX(0);
+  visibility: visible;
 }
 
 .nav-mobile a {
@@ -363,6 +366,7 @@ button {
   letter-spacing: 0.1em;
   color: var(--ivory);
   transition: var(--transition-fast);
+  padding: 0.5rem 1rem;
 }
 
 .nav-mobile a:hover {
@@ -660,7 +664,7 @@ button {
   padding: 3rem 2rem;
   text-align: center;
   flex: 1;
-  min-width: 160px;
+  min-width: 140px;
   position: relative;
 }
 
@@ -929,13 +933,13 @@ select.form-control option {
 }
 
 .social-btn {
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
   border: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: var(--gray);
   transition: var(--transition-fast);
 }
@@ -1515,11 +1519,11 @@ select.form-control option {
 
   /* Typography Scale Down */
   .hero-title {
-    font-size: 3.25rem;
+    font-size: 2.6rem;
   }
 
   .section-title {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   .section {
@@ -1570,7 +1574,7 @@ select.form-control option {
   }
 
   .page-header h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   /* Adjust floats to fit bottom bar on very small screens */
